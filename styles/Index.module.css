@@ -1,0 +1,431 @@
+/* styles/globals.css */
+
+ .testBody {
+   background-color: #000;
+   color: #f0f0f0;
+   magin:0;
+   padding:2rem;
+   font-family: Arial, sans-serif;
+ }
+
+ .testBody h1, 
+ .testBody h2 {
+   color: #ffffff;
+ }
+
+ .testBody input[type="text"],
+ .testBody textarea,
+ .testBody select {
+   background-color: #1e1e1e;
+   color: #f0f0f0;
+   border: 1px solid #333333;
+   padding: 8px;
+   margin-top:.5rem;
+ }
+
+.testBody input[type="text"],
+.testBody textarea {
+min-width: 200px;
+ width:45%;
+}
+ .testBody button {
+   background-color: #007bff;
+   color: #ffffff;
+   border: none;
+   padding: 10px 20px;
+   cursor: pointer;
+   margin:.5rem;
+ }
+
+ .testBody button:disabled {
+   background-color: #f00;
+   cursor: not-allowed;
+ }
+
+ .testBody pre {
+   background-color: #1e1e1e;
+   padding: 10px;
+   overflow-x: auto;
+ }
+
+
+/* Style for the modal title */
+.modalTitle {
+  font-size: .9rem;
+  margin-bottom: 1rem;
+}
+
+.modalHeader {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.modalHeader2 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Style for the modal image */
+.modalImage {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+/* Style for the modal description */
+.modalDescription {
+  font-size: .8rem;
+  margin-bottom: 1rem;
+}
+
+.modalField h1, .modalField h2, .modalField h3, .modalField h4, .modalField h5, .modalField h6 {
+  margin-bottom: 0.5rem;
+  font-size:1rem;
+}
+
+
+/* Style for additional fields */
+.modalField {
+  margin-bottom: 0.5rem;
+  font-size:.8rem;
+}
+
+/* Style for tags */
+.modalTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.modalTag {
+  background-color: #222;
+  color: #fff;
+  padding: 0.25rem 0.5rem;
+  border-radius: 5px;
+  font-size: 0.8rem;
+}
+
+/* Style for links */
+.modalField a {
+  color: #ffa100;
+  text-decoration: none;
+  margin-right: 0.5rem;
+}
+
+.modalField a:hover {
+  text-decoration: underline;
+}
+
+
+/* Chat.module.css */
+.reactModalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 1); /* Dimmed background */
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  z-index: 10000; /* High z-index to ensure it's on top */
+}
+
+
+
+.reactModalContent {
+  position: relative;
+  max-width: 330px;
+  width: 100%;
+  background-color: #000; /* Match chat box background */
+  color:#fff;
+  border: 2px solid #111;
+  border-radius: 9999px;
+  padding: 1rem; /* Match chat box padding */
+  border-radius: 20px; /* Match chat box border radius */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: add shadow for depth */
+  outline: none; /* Remove default focus outline */
+  display: flex;
+  flex-direction: column;
+  align-items: left; /* Center content horizontally */
+  justify-content: center; /* Center content vertically */
+  margin: auto; /* Center the modal in the overlay */
+}
+
+.color{
+ color:#007bff;
+}
+.reactModalContent p {
+  margin-top:.5rem;
+  margin-bottom:0.5rem;
+}
+
+.adjustGoalsModalContent {
+  position: relative;
+  max-width: 330px;
+  width: 90%;
+  height:60%;
+  background-color: #000; /* Match chat box background */
+  color:#fff;
+  border: 2px solid #111;
+  border-radius: 9999px;
+  padding: 1rem; /* Match chat box padding */
+  border-radius: 20px; /* Match chat box border radius */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: add shadow for depth */
+  outline: none; /* Remove default focus outline */
+  display: flex;
+  flex-direction: column;
+  align-items: left; /* Center content horizontally */
+  justify-content: center; /* Center content vertically */
+  margin: auto; /* Center the modal in the overlay */
+  overflow-y: auto; /* Make the modal content scrollable */
+}
+
+.modalScrollableContent {
+  padding: 1rem;
+  max-height: 80vh; /* Adjust the height as needed */
+  overflow-x: none; /* Make this part of the modal scrollable */
+  overflow-y:auto;
+}
+
+
+
+.chatContainer, .reactModalOverlay{
+  font-family: "Montserrat", sans-serif;
+  width:100%;
+  margin:0;
+  padding:0;
+  overflow-x: hidden;
+}
+
+
+.reactModalContent {
+  /* ... existing styles ... */
+  max-width: 100vw; /* Adjust the width of the modal */
+  height: 80vh; /* Adjust the width of the modal */
+  padding: 0rem 1rem 1rem 1rem; /* Add more padding for better spacing */
+  border-radius: 40px; /* Smooth out the corners */
+  background-color: #000; /* Dark background for the modal */
+  color: #fff; /* White text for readability */
+  border: 2px solid #222; /* Border to match other buttons */
+  margin:1rem;
+}
+
+.reactModalContent a {
+   color: #ffa100; /* Dark background for the modal */
+}
+
+/* Add a close button style */
+.closeButton {
+  background: none;
+  border: none;
+  color: #fff;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Style for the modal title */
+.modalTitle {
+  font-size: .9rem;
+  margin-bottom: 1rem;
+}
+
+.modalHeader {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Style for the modal image */
+.modalImage {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+/* Style for the modal description */
+.modalDescription {
+  font-size: .8rem;
+  margin-bottom: 1rem;
+}
+
+.modalField h1, .modalField h2, .modalField h3, .modalField h4, .modalField h5, .modalField h6 {
+  margin-bottom: 0.5rem;
+  font-size:1rem;
+}
+
+
+/* Style for additional fields */
+.modalField {
+  margin-bottom: 0.5rem;
+  font-size:.8rem;
+}
+
+/* Style for tags */
+.modalTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.modalTag {
+  background-color: #222;
+  color: #fff;
+  padding: 0.25rem 0.5rem;
+  border-radius: 5px;
+  font-size: 0.8rem;
+}
+
+/* Style for links */
+.modalLink {
+  color: #ffa100;
+  text-decoration: none;
+  margin-right: 0.5rem;
+}
+
+.modalLink:hover {
+  text-decoration: underline;
+}
+
+.imageUploadStatus {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px; /* Increased spacing */
+  padding: 10px; /* Add padding around the status */
+  background-color: #000; /* Optional: background color for the status area */
+  border-radius: 8px; /* Optional: rounded corners for the status area */
+}
+
+.imageThumbnail {
+  width: 60px; /* Adjust the size as needed */
+  height: 60px; /* Adjust the size as needed */
+  object-fit: cover;
+  margin-right: 15px; /* Increased spacing */
+  border: 1px solid #333; /* Optional: border around the thumbnail */
+  border-radius: 4px;
+}
+
+/* Progress status text */
+.imageUploadStatus p {
+  font-size: 0.9rem;
+  color: #fff;
+  margin-left: 15px; /* Increased spacing */
+}
+.imageUploadStatus {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px; /* Increased spacing */
+  padding: 10px; /* Add padding around the status */
+  background-color: #000; /* Optional: background color for the status area */
+  border-radius: 8px; /* Optional: rounded corners for the status area */
+}
+
+.imageThumbnail {
+  width: 60px; /* Adjust the size as needed */
+  height: 60px; /* Adjust the size as needed */
+  object-fit: cover;
+  margin-right: 15px; /* Increased spacing */
+  border: 1px solid #333; /* Optional: border around the thumbnail */
+  border-radius: 4px;
+}
+
+/* Progress status text */
+.imageUploadStatus p {
+  font-size: 0.9rem;
+  color: #666;
+  margin-left: 15px; /* Increased spacing */
+}
+
+.fileAdd .modalDropdown {
+  width: 100%; /* Full width of the container */
+}
+
+
+
+
+/* Add any additional button styles you need here */
+.modalButton {
+  width:100%;
+  background-color: #000; /* Match chat box button background */
+  color: #fff; /* Match chat box button text color */
+  border: 2px solid #333; /* Match chat box button border */
+  border-radius: 9999px; /* Rounded corners for buttons */
+  padding: 0.5rem 1rem; /* Padding for buttons */
+  margin-top: 0.5rem; /* Space between buttons and content */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 0.9rem; /* Font size for button text */
+  transition: transform 0.2s ease-in-out; /* Smooth transition for hover effect */
+}
+
+.modalButton:hover {
+  transform: translateY(-2px); /* Slight move up on hover */
+  border: 2px solid #0af; /* Change border color on hover */
+}
+
+.modalInput {
+  width: 100%; /* Full width minus padding */
+  background-color: #fff; /* Background color for input */
+  color: #000; /* Text color for input */
+  border: 2px solid #111; /* Border to match button */
+  border-radius: 9999px; /* Rounded corners to match button */
+  padding: 0.5rem 1rem; /* Padding to match button */
+  margin-top: 0.5rem; /* Space between input and other content */
+  font-size: 0.9rem; /* Font size to match button */
+  outline: none; /* Remove default focus outline */
+  box-sizing: border-box; /* Include padding and border in the width */
+}
+
+.modalInput:focus {
+  border: 2px solid #0af; /* Change border color on focus to match button hover */
+}
+
+
+/* Style for the dropdown */
+.modalDropdown {
+  background-color: #000; /* Match chat box background */
+  color: #fff; /* Match chat box text color */
+  border: 2px solid #222; /* Match chat box border */
+  border-radius: 9999px; /* Rounded corners for dropdown */
+  padding: 0.5rem 1rem; /* Padding for dropdown */
+  margin-top: 0.5rem; /* Space between dropdown and other content */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 0.9rem; /* Font size for dropdown text */
+  outline: none; /* Remove default focus outline */
+}
+
+
+
+/* Style for the slider */
+.modalSlider {
+  -webkit-appearance: none; /* Override default appearance */
+  width: 100%; /* Full-width */
+  height: 0.5rem; /* Slider handle height */
+  background: #fff; /* Background color */
+  outline: none; /* Remove default focus outline */
+  opacity: 0.7; /* Partial transparency */
+  -webkit-transition: 0.2s; /* Transition for slider handle */
+  transition: opacity 0.2s;
+  margin-top: 0.5rem; /* Space between slider and other content */
+}
+
+.modalSlider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default appearance */
+  appearance: none;
+  width: 1.5rem; /* Handle width */
+  height: 1.5rem; /* Handle height */
+  border-radius: 50%; /* Circular handle */
+  background: #0af; /* Handle color */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.modalSlider::-moz-range-thumb {
+  width: 1.5rem; /* Handle width */
+  height: 1.5rem; /* Handle height */
+  border-radius: 50%; /* Circular handle */
+  background: #fff; /* Handle color */
+  cursor: pointer; /* Pointer cursor on hover */
+}
